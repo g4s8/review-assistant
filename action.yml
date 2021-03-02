@@ -1,0 +1,25 @@
+---
+name: 'Review assistant GitHub action'
+description: 'Assign reviewers, assignees and labels to PRs'
+branding:
+  # icon: arrow-up-circle
+  # color: blue
+inputs:
+  token:
+    description: 'GitHub access token, e.g. `${{ secrets.GITHUB_TOKEN }}`'
+    required: true
+  reviewers:
+    description: 'Reviewers to assign, comma-separated list'
+    required: false
+    default: ''
+  assignees:
+    description: 'Assignees for this PR, comma-separated list'
+    required: false
+    default: ''
+  labels:
+    description: 'Labels to attach to the PR, comma-separated list'
+    required: false
+    default: ''
+runs:
+  using: 'node12'
+  main: 'index.js'
