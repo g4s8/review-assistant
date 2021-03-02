@@ -1,0 +1,14 @@
+---
+name: Request review
+"on":
+  pull_request:
+    types: ['opened']
+jobs:
+  assist-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: g4s8/review-assistant
+        with:
+          reviewers: 'g4s8'
+          assignees: 'g4s8'
+          labels: 'scope/pr,review-assistant'
