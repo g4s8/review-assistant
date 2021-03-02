@@ -12,3 +12,4 @@ jobs:
           reviewers: 'g4s8'
           assignees: 'g4s8'
           labels: 'scope/pr,review-assistant'
+          token: '${{ secrets.GITHUB_TOKEN }}'
