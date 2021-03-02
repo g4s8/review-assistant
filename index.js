@@ -26,11 +26,12 @@
 // to start action func with specified dependencies.
 // Reports action failure on error.
 function main() {
+  const core = require('@actions/core');
   try {
     new Action(
       require('fs'),
       require('@actions/github')
-    ).run(require('@actions/core'));
+    ).run(core);
   } catch (err) {
     core.setFailed(err.message);
   }
